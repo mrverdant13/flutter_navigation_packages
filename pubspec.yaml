@@ -1,0 +1,17 @@
+name: flutter_navigation_packages
+description: A Flutter project used a sandbox to test navigation packages
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  very_good_analysis: ^2.4.0
+
+flutter:
+  uses-material-design: true
