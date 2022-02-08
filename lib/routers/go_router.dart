@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_navigation_packages/routers/interface.dart';
+import 'package:flutter_navigation_packages/routers/_interface.dart';
 import 'package:flutter_navigation_packages/screens/book_details.screen.dart';
 import 'package:flutter_navigation_packages/screens/books.screen.dart';
 import 'package:go_router/go_router.dart';
