@@ -71,6 +71,7 @@ class _BookDetailsScreenState extends State<BookDetailsScreen> {
                       restorationId: 'books-grid',
                       controller: _booksScrollController,
                       slivers: const [
+                        SliverToBoxAdapter(), // HACK: Bug fix - https://github.com/flutter/flutter/issues/55170
                         BooksSliver(),
                       ],
                     ),
