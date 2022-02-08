@@ -9,5 +9,6 @@ class ReloadBooksButton extends StatelessWidget {
   Widget build(BuildContext context) => IconButton(
         onPressed: () => context.read<BooksNotifier>().loadBooks(),
         icon: const Icon(Icons.refresh),
+        tooltip: 'Reload books',
       );
 }
