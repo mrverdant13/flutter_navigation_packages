@@ -27,6 +27,12 @@ class _BookDetailsPanelState extends State<BookDetailsPanel> {
   }
 
   @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) => Consumer<BookDetailsNotifier>(
         builder: (context, bookDetailsNotifier, _) {
           final details = bookDetailsNotifier.details;
