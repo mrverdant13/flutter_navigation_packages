@@ -44,6 +44,7 @@ class NavigationApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => BookDetailsNotifier()),
       ],
       child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         title: navigator.name,
         routerDelegate: navigator.routerDelegate,
         routeInformationParser: navigator.routeInformationParser,
