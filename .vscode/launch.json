@@ -7,5 +7,11 @@
             "type": "dart",
             "program": "lib/main.go_router.dart",
         },
+        {
+            "name": "routemaster",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.routemaster.dart",
+        },
     ]
 }
