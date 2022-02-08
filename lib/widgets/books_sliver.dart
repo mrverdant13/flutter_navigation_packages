@@ -17,7 +17,23 @@ class BooksSliver extends StatelessWidget {
               ),
             );
           }
+
           final books = notifier.books;
+
+          if (books.isEmpty) {
+            return const SliverPadding(
+              padding: EdgeInsets.all(20),
+              sliver: SliverFillRemaining(
+                child: Center(
+                  child: Text(
+                    'No books found',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            );
+          }
+
           return SliverPadding(
             padding: const EdgeInsets.all(20),
             sliver: SliverGrid(
