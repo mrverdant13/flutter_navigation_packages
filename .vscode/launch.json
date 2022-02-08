@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "go_router",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.go_router.dart",
+        },
+    ]
+}
