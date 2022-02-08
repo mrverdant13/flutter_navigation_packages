@@ -14,7 +14,8 @@ class Book extends Equatable {
         id: id,
         title: 'Title Of The Book #$id',
         author: 'Author $id',
-        imageUrl: 'https://picsum.photos/id/$id/300/400',
+        // Offset on image ID to avoid similar pictures.
+        imageUrl: 'https://picsum.photos/id/${id + 10}/300/400',
       );
 
   final int id;
