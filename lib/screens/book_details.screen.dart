@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_navigation_packages/models/on_book_selection.callback.dart';
 import 'package:flutter_navigation_packages/state/book_details.notifier.dart';
 import 'package:flutter_navigation_packages/widgets/book_details_panel.dart';
 import 'package:flutter_navigation_packages/widgets/books_sliver.dart';
@@ -9,13 +8,11 @@ class BookDetailsScreen extends StatefulWidget {
   const BookDetailsScreen({
     Key? key,
     required this.bookId,
-    required this.onBookSelection,
   }) : super(key: key);
 
   static const routeName = 'BookDetailsRoute';
 
   final int bookId;
-  final OnBookSelectionCallback onBookSelection;
 
   @override
   State<BookDetailsScreen> createState() => _BookDetailsScreenState();
@@ -73,10 +70,8 @@ class _BookDetailsScreenState extends State<BookDetailsScreen> {
                       key: const PageStorageKey('books-grid'),
                       restorationId: 'books-grid',
                       controller: _booksScrollController,
-                      slivers: [
-                        BooksSliver(
-                          onBookTap: widget.onBookSelection,
-                        ),
+                      slivers: const [
+                        BooksSliver(),
                       ],
                     ),
                   ),

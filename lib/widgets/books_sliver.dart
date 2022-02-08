@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_navigation_packages/models/book.entity.dart';
+import 'package:flutter_navigation_packages/routers/interface.dart';
 import 'package:flutter_navigation_packages/state/books.notifier.dart';
 import 'package:flutter_navigation_packages/widgets/book_card.dart';
 import 'package:provider/provider.dart';
 
 class BooksSliver extends StatelessWidget {
-  const BooksSliver({
-    Key? key,
-    this.onBookTap,
-  }) : super(key: key);
-
-  final void Function(
-    BuildContext context,
-    Book book,
-  )? onBookTap;
+  const BooksSliver({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Consumer<BooksNotifier>(
@@ -32,9 +24,9 @@ class BooksSliver extends StatelessWidget {
               delegate: SliverChildBuilderDelegate(
                 (context, index) => BookCard(
                   book: books[index],
-                  onTap: onBookTap == null
-                      ? null
-                      : () => onBookTap?.call(context, books[index]),
+                  onTap: () async => context
+                      .read<AppNavigator>()
+                      .navigate(context, '/books/${books[index].id}'),
                 ),
                 childCount: books.length,
               ),
