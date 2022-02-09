@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_navigation_packages/models/json.type.dart';
 
 @immutable
 class User extends Equatable {
@@ -10,7 +11,7 @@ class User extends Equatable {
     this.status,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
+  factory User.fromJson(JSON json) => User(
         id: json['id'] as int,
         username: json['username'] as String,
         avatarUrl: json['avatarUrl'] as String,

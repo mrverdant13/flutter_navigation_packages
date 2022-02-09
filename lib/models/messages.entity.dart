@@ -1,7 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_navigation_packages/models/json.type.dart';
-
 import 'package:flutter_navigation_packages/models/user.entity.dart';
 
 @immutable
