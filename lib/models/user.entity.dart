@@ -25,4 +25,11 @@ class User extends Equatable {
 
   @override
   List<Object?> get props => [id, username, avatarUrl, status];
+
+  JSON toJson() => <String, dynamic>{
+        'id': id,
+        'username': username,
+        'avatar_url': avatarUrl,
+        'status': status,
+      };
 }
